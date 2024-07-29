@@ -1,0 +1,88 @@
+@use 'variaveis';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Anta, sans-serif;
+    color: variaveis.$corTexto;
+}
+
+.content {
+    text-align: center;
+
+    .container {
+        width: 1440px;
+        margin: 0 auto;
+        border: 1px solid red;
+
+        @media (max-width: 640px) {
+            max-width: 80%;
+        }
+
+        @media (max-width: 1024px) {
+            max-width: 90%;
+        }
+    }
+
+    &__item {
+        font-size: 26px;
+        padding: 12px;
+
+        h1 {
+            padding-bottom: 8px;
+        }
+
+        @media (max-width: 640px) {
+            font-size: 18px;
+        }
+    }
+
+    &__email {
+        padding-top: 20px;
+
+        &__container {
+            padding: 20px;
+            form {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+
+                input {
+                    width: 480px;
+                    height: 40px;
+
+                    &::placeholder {
+                        padding-left: 8px;
+                    }
+                }
+
+                button {
+                    padding: 10px;
+                    color: variaveis.$corTextoSecondary;
+                    background-color: variaveis.$button;
+                }
+
+                @media (max-width: 640px) {
+                    gap: 5px;
+
+                    input {
+                        height: 42px;
+                    }
+
+                    button {
+                        padding: 3px
+                    }
+                }
+            }
+        }
+    }
+
+    #contador {
+        color: variaveis.$button;
+        font-weight: bold;
+        font-size: 28px;
+    }
+}
+
